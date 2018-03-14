@@ -164,13 +164,6 @@ event::
                 $this->session->set('_locale', $user->getLocale());
             }
         }
-
-        public static function getSubscribedEvents()
-        {
-            return array(
-                SecurityEvents::INTERACTIVE_LOGIN => array(array('onInteractiveLogin', 15)),
-            );
-        }
     }
 
 Then register the listener:
